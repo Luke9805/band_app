@@ -39,7 +39,8 @@ class Membro:
 
     @override
     def __str__(self):
-        return f"{self.nome} {self.cognome} (@{self.username}) {self.strumenti}"
+        strumento = ", ".join(str(strumento) for strumento in self.strumenti)
+        return f"{self.nome} {self.cognome} (@{self.username}) {strumento}"
 
     def cambia_nome(self, nuovo_nome: str):
         self.nome = nuovo_nome
