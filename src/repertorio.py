@@ -1,7 +1,9 @@
 from .elemento_repertorio import ElementoRepertorio
 from .canzone import Canzone
 from .enums import Key, Stato
-from src import canzone
+
+
+
 
 class Repertorio:
     def __init__(self):

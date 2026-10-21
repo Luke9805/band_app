@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, auto
 
 
 class Key(Enum):
@@ -35,3 +35,15 @@ class Stato(Enum):
     NEW = "nuova aggiunta"
     PART_READY = "parzialmente studiata"
     READY =  "Pronta per l'esecuzione"
+
+class Strumento(Enum):
+    CLASSICAL_GUITAR = auto() 
+    ACOUSTIC_GUITAR = auto()
+    ELECTRIC_GUITAR = auto()
+    
+    BASS = auto()
+    BATTERY = auto()
+
+
+    PIANO = auto()
+
