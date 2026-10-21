@@ -40,3 +40,11 @@ class Membro:
     @override
     def __str__(self):
         return f"{self.nome} {self.cognome} (@{self.username}) {self.strumenti}"
+
+    def cambia_nome(self, nuovo_nome: str):
+        self.nome = nuovo_nome
+
+    def cambia_cognome(self, nuovo_cognome: str):
+        self.nome = nuovo_cognome
+
+

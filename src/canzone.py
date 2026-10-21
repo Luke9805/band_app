@@ -22,10 +22,10 @@ class Canzone:
 
         # Assegnazione attributi
         self.id_canzone: str = str(uuid.uuid4())
-        self.titolo = titolo.strip()
-        self.autore = autore.strip()
-        self.bpm = bpm
-        self.key = key
+        self.titolo: str = titolo.strip()
+        self.autore: str = autore.strip()
+        self.bpm: float = bpm
+        self.key: Key = key
         self.note = note.strip() if note else ""
 
     def cambia_key(self, nuova_key: Key):
