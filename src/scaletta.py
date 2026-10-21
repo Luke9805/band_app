@@ -1,5 +1,4 @@
 from .canzone import Canzone
-from .elemento_repertorio import ElementoRepertorio
 from .enums import Stato
 
 class Scaletta:

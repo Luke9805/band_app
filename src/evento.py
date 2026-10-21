@@ -9,6 +9,10 @@ class Evento:
         self.luogo = luogo
         self.scaletta = Scaletta()
 
+
+    def aggiungi_a_scaletta(self, nuova_canzone: Canzone):
+        pass
+
     
 
 
