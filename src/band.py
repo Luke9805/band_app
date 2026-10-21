@@ -1,5 +1,5 @@
 from typing import override
-
+from .canzone import Canzone
 from .membro import Membro
 from .repertorio import Repertorio
 
@@ -7,17 +7,23 @@ class Band:
 
     def __init__(self, 
     nome_band: str,
-    primo_membro: Membro | None = None,
+    primo_membro: Membro | None = None
     ) -> None:
 
         self.nome_band: str = nome_band
         self.membri_band: list[Membro] = [primo_membro] if primo_membro is not None else []
-        self.repertorio: Repertorio = Repertorio()
+        self.repertorio_band: Repertorio = Repertorio()
 
 
     def aggiungi_membro(self, nuovo_membro: Membro) -> None:
         if nuovo_membro not in self.membri_band:
             self.membri_band.append(nuovo_membro)
+
+    def agggingi_a_repertorio_band(self, nuova_canzone: Canzone):
+        self.repertorio_band.aggiungi(nuova_canzone)
+
+    def agggingi_a_repertorio_band(self, nuova_canzone: Canzone) -> Canzone:
+        return self.repertorio_band.rimuovi(nuova_canzone)
 
     @override
     def __str__(self) -> str:

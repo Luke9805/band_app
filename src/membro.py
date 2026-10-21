@@ -1,5 +1,7 @@
 from typing import override
 
+from src.canzone import Canzone
+
 from .custom_exceptions import ValidazioneCampoError
 from .repertorio import Repertorio
 from .enums import Strumento
@@ -27,9 +29,14 @@ class Membro:
         self.cognome: str = cognome
         self.username: str = username
         self.strumenti: list[Strumento] = strumenti if strumenti is not None else []
-        self.repertorio: Repertorio = Repertorio()
+        self.repertorio_personale: Repertorio = Repertorio()
 
 
+    def aggiungi_a_repertorio_personale(self, nuova_canzone: Canzone):
+        self.repertorio_personale.aggiungi(nuova_canzone)
+
+    def rimuovi_da_repertorio_personale(self, nuova_canzone: Canzone) -> Canzone:
+        return self.repertorio_personale.rimuovi(nuova_canzone)
 
 
     def aggiungi_strumento(self, strumento: Strumento):

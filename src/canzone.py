@@ -26,7 +26,7 @@ class Canzone:
         self.autore: str = autore.strip()
         self.bpm: float = bpm
         self.key: Key = key
-        self.note = note.strip() if note else ""
+        self.note: str = note.strip() if note else ""
 
     def cambia_key(self, nuova_key: Key):
         if not isinstance(nuova_key, Key):
@@ -34,7 +34,7 @@ class Canzone:
         self.key = nuova_key
     
     def cambia_bpm(self, nuovo_bpm: float):
-        if nuovo_bpm is None or nuovo_bpm <= 0:
+        if nuovo_bpm <= 0:
             raise ValidazioneCampoError("Il nuovo BPM deve essere un numero maggiore di 0!")
         self.bpm = nuovo_bpm
 
