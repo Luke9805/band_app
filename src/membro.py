@@ -1,5 +1,5 @@
 from .custom_exceptions import ValidazioneCampoError
-
+from .repertorio import Repertorio
 class Membro:
     def __init__(self, username: str, nome: str, cognome: str, strumenti=None):
         
@@ -16,6 +16,7 @@ class Membro:
         self.cognome = cognome
         self.username = username
         self.strumenti = strumenti if strumenti is not None else []
+        self.repertorio = Repertorio()
 
 
     def aggiungi_strumento(self, strumento):

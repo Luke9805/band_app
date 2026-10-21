@@ -1,11 +1,10 @@
 import uuid
-from typing import Optional
-from .key import Key  # O Tonalita, a seconda di come hai chiamato l'Enum
+from .enums import Key  # O Tonalita, a seconda di come hai chiamato l'Enum
 from .custom_exceptions import ValidazioneCampoError
 
 
 class Canzone:
-    def __init__(self, titolo: str, autore: str, bpm: float, key: Key, note: Optional[str] = ""):
+    def __init__(self, titolo: str, autore: str, bpm: float, key: Key, note=None):
         
         # Check di sicurezza
         if titolo is None or not str(titolo).strip():

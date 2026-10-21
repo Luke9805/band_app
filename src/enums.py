@@ -29,3 +29,9 @@ class Key(Enum):
     A_MIN = "La Minore"
     A_SHARP_MIN = "La# Minore"
     B_MIN = "Si Minore"
+
+
+class Stato(Enum):
+    NEW = "nuova aggiunta"
+    PART_READY = "parzialmente studiata"
+    READY =  "Pronta per l'esecuzione"
