@@ -1,3 +1,5 @@
+from .scaletta import Scaletta
+from .canzone import Canzone
 from datetime import datetime
 import zoneinfo
 
@@ -11,7 +13,7 @@ class Evento:
 
 
     def aggiungi_a_scaletta(self, nuova_canzone: Canzone):
-        pass
+        self.scaletta.aggiungi_alla_scaletta
 
     
 
