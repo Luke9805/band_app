@@ -20,6 +20,7 @@ class Repertorio:
         return self.brani.pop(da_rimuovere.id_canzone)
 
     def getCanzone(self,id_canzone : str):
+        if id_canzone not in self.brani:
+            raise CanzoneNonTrovataException("La canzone specificata non risulta presente nel repertorio")
         return self.brani[id_canzone]
-    
 

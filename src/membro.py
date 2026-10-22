@@ -5,6 +5,7 @@ from src.canzone import Canzone
 from .custom_exceptions import ValidazioneCampoError
 from .repertorio import Repertorio
 from .enums import Strumento
+from src import repertorio
 
 class Membro:
 
@@ -12,6 +13,8 @@ class Membro:
      username: str,
      nome: str,
      cognome: str,
+     #mail: str, # da aggiungere
+     #password: str, #da aggiungere
      strumenti: list[Strumento] | None = None
      ):
         
@@ -37,7 +40,6 @@ class Membro:
 
     def rimuovi_da_repertorio_personale(self, nuova_canzone: Canzone) -> Canzone:
         return self.repertorio_personale.rimuovi(nuova_canzone)
-
 
     def aggiungi_strumento(self, strumento: Strumento):
         if strumento not in self.strumenti:
