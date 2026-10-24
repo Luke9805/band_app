@@ -5,7 +5,7 @@ from src.canzone import Canzone
 from .custom_exceptions import ValidazioneCampoError
 from .repertorio import Repertorio
 from .enums import Strumento
-from src import repertorio
+
 
 class Membro:
 
