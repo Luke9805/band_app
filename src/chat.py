@@ -2,9 +2,7 @@ import uuid
 
 class Chat:
 
-    def __init__(self,
-    id_band: str,
-    ) -> None:
+    def __init__(self,id_band: str,) -> None:
         self.id_band = id_band
 
 
