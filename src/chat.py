@@ -37,6 +37,22 @@ class Chat:
 
         self.messaggi[id_messaggio].contenuto = contenuto_modificato
 
+    
+    def get_messaggio(self, id_messaggio: str) -> Messaggio:
+        if id_messaggio not in self.messaggi:
+            raise MessaggioNonPresente("Il seguente messaggio non è presente nella chat")
+        
+        return self.messaggi[id_messaggio] 
+
+
+    def cerca_messaggi(self, testo: str) -> list[Messaggio]:
+        risultato = []
+
+        for msg in self.messaggi.values():
+            if testo.lower() in msg.contenuto.lower():
+                risultato.append(msg)
+
+        return risultato 
 
 
 class Messaggio:
