@@ -3,9 +3,7 @@ from src.custom_exceptions import ValidazioneCampoError, MessaggioNonPresente
 
 class Chat:
 
-    def __init__(self,
-    id_band: str,
-    ) -> None:
+    def __init__(self,id_band: str,) -> None:
         self.id_band = id_band
         self.messaggi: dict[str, Messaggio] = {} 
 

@@ -35,9 +35,15 @@ def main():
         Canzone("Do I Wanna Know?", "Arctic Monkeys", 85, Key.G_MIN)
     ]
 
+    canzone_personale = Canzone("American Idiot", "Green Day", 186, Key.G_SHARP_MAJ)
+    membro6.aggiungi_a_repertorio_personale(canzone_personale)
     # 4. Popolamento repertorio band
     for c in canzoni:
         mia_band.aggingi_a_repertorio_band(c)
+
+
+    mia_band.copia_su_repertorio_band(membro6.username, canzone_personale.id_canzone)
+    
 
     # 5. Creazione dell'Evento
 #   concerto = Evento(
