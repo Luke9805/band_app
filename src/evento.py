@@ -1,4 +1,6 @@
 from datetime import datetime
+from .scaletta import Scaletta
+from .canzone import Canzone
 import zoneinfo
 
 
