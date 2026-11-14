@@ -13,3 +13,11 @@ class CanzoneNonTrovataException(Exception):
 class MessaggioNonPresente(Exception):
     """Eccezione lanciata quando un messaggio non è presente nella chat"""
     pass
+
+class UtenteNonRegistrato(Exception):
+        """Eccezione lanciata quando un l'utente non risulta nel database"""
+    pass
+
+class BandNonRegistrata(Exception):
+        """Eccezione lanciata quando un la band non risulta nel database"""
+    pass
