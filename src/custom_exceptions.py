@@ -15,9 +15,9 @@ class MessaggioNonPresente(Exception):
     pass
 
 class UtenteNonRegistrato(Exception):
-        """Eccezione lanciata quando un l'utente non risulta nel database"""
+    """Eccezione lanciata quando un l'utente non risulta nel database"""
     pass
 
 class BandNonRegistrata(Exception):
-        """Eccezione lanciata quando un la band non risulta nel database"""
+    """Eccezione lanciata quando un la band non risulta nel database"""
     pass
